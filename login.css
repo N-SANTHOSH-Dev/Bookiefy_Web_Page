@@ -103,9 +103,52 @@ a.forgot-password {
 a.forgot-password:hover {
   color: #512da8;
 }
-
-span{
-  margin-left: 100px;
-  font-size: 20px;
-  color:#e03a56;
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
+
+.home-icon {
+  font-size: 22px;
+  color: #e03a56;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.home-icon:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 480px) {
+  .login {
+    padding: 20px;
+    width: 95%;
+    border-radius: 15px;
+  }
+
+  .login-header h1 {
+    font-size: 22px;
+  }
+
+  .home-icon {
+    font-size: 20px;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .button {
+    width: 80%;
+    padding: 10px;
+  }
+
+  .button a,
+  .button button {
+    font-size: 14px;
+  }
+}
+

@@ -10,25 +10,46 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  padding: 20px;
 }
-.login {
+
+.sign-up {
   background-color: rgba(255, 255, 255, 0.95);
-  padding: 40px;
+  padding: 30px 25px;
   border-radius: 20px;
-  width: 90%;
+  width: 100%;
   max-width: 420px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.8s ease-out;
   text-align: center;
+  position: relative;
 }
-.login h1 {
+
+/* Header and Home Icon as Flexbox */
+.signup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.signup-header h1 {
   color: #333;
   font-size: 24px;
-  margin-bottom: 25px;
   border-bottom: 2px solid #ff4d6d;
-  display: inline-block;
   padding-bottom: 5px;
 }
+
+.signup-header a {
+  color: #e03a56;
+  font-size: 22px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+.signup-header a:hover {
+  transform: scale(1.1);
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -46,6 +67,7 @@ input:focus {
   border-color: #ff4d6d;
   box-shadow: 0 0 6px rgba(255, 77, 109, 0.4);
 }
+
 .button {
   background-color: #ff4d6d;
   margin: 15px auto;
@@ -67,16 +89,19 @@ input:focus {
   cursor: pointer;
   width: 100%;
 }
+
 .button:hover {
   background-color: #e03a56;
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
 p {
   font-size: 13px;
   color: #555;
   margin: 5px 0;
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -87,8 +112,24 @@ p {
     transform: translateY(0);
   }
 }
-span{
-  margin-left: 100px;
-  font-size: 20px;
-  color:#e03a56;
+@media (max-width: 480px) {
+  .sign-up {
+    padding: 25px 20px;
+  }
+
+  .signup-header h1 {
+    font-size: 20px;
+  }
+
+  .signup-header a {
+    font-size: 20px;
+  }
+
+  .button {
+    width: 80%;
+  }
+
+  input {
+    font-size: 13px;
+  }
 }

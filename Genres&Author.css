@@ -7,7 +7,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-  overflow: hidden; 
+  overflow-x: hidden;
 }
 
 header {
@@ -60,16 +60,13 @@ header {
   background-color: rgba(255, 183, 77, 0.1);
   color: #ffb74d;
 }
-
 .nav-links a i {
   color: white;
   transition: color 0.3s;
 }
-
 .nav-links a:hover i {
   color: #ffb74d;
 }
-
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -80,7 +77,6 @@ header {
   background-color: #ffb74d;
   transition: width 0.3s ease;
 }
-
 .nav-links a:hover::after {
   width: calc(100% - 20px);
 }
@@ -92,43 +88,12 @@ header {
   color: white;
 }
 
-@media (max-width: 768px) {
-  .nav {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #333;
-    flex-direction: column;
-    width: 100%;
-    z-index: 10;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links a {
-    padding: 12px;
-    border-top: 1px solid #444;
-  }
-}
-
 .main-container {
   margin-top: 90px;
   display: flex;
-  height: calc(100vh - 90px); 
   gap: 20px;
+  height: calc(100vh - 90px);
+  overflow: hidden;
 }
 
 .genre-menu {
@@ -137,7 +102,7 @@ header {
   top: 90px;
   left: 0;
   bottom: 0;
-  width: 250px;
+  width: 150px;
   background: #fff;
   padding: 20px;
   overflow-y: auto;
@@ -177,6 +142,7 @@ header {
   width: calc(100% - 250px);
   height: calc(100vh - 90px);
 }
+
 .genre-books {
   display: none;
   animation: fadeIn 0.5s ease;
@@ -201,7 +167,6 @@ header {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
-
 .book-card:hover {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
@@ -217,13 +182,11 @@ header {
   padding: 10px;
   text-align: center;
 }
-
 .book-info h3 {
   font-size: 1rem;
   color: #333;
   margin-bottom: 5px;
 }
-
 .book-info p {
   font-size: 0.9rem;
   color: #777;
@@ -237,5 +200,71 @@ header {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+
+  .main-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .genre-menu {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    z-index: auto;
+  }
+
+  .books-display {
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 10px;
+  }
+
+  .book-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px;
+    border-top: 1px solid #444;
+    width: 100%;
   }
 }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookiefy - Login</title>
+  <link rel="icon" href="img/bookiefy logo.webp" />
+  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+ 
+</head>
+<body>
+ <div class="login">
+  <h1><b style="color: red;">B</b>ookiefy Login</h1>
+  <a href="index.html"><span><i class="fa-solid fa-house-chimney"></i></span></a>
+  <form id="login-form">
+    <input type="email" placeholder="Enter e-mail" required /><br>
+    <input type="password" placeholder="Enter password" required /><br>
+    <a href="#" class="forgot-password" onclick="showResetForm()">Forgot password?</a><br><br>
+    <div class="button">
+      <button type="submit">Login</button>
+    </div>
+    <p>(or)</p>
+    <p>I don't have an account</p>
+    <div class="button">
+      <a href="signup.html">Sign up</a>
+    </div>
+  </form>
+  <form id="reset-form" style="display: none;">
+    <h2 style="font-size: 20px;">Reset Password</h2>
+    <input type="email" placeholder="Enter your registered email" required /><br><br>
+    <div class="button">
+      <button type="submit">Send Reset Link</button>
+    </div>
+    <br>
+    <a href="#" class="forgot-password" onclick="showLoginForm()">Back to Login</a>
+  </form>
+</div>
+
+  <script src="script.js">
+</script>
+
+</body>
+</html>

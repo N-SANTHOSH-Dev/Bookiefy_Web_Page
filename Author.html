@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookiefy - Authors</title>
+  <link rel="icon" href="img/bookiefy logo.webp" />
+  <link rel="stylesheet" href="Genres&Author.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+ 
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="logo">
+        <h1 class="head">Bookiefy</h1>
+      </div>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fa fa-bars" id="toggle-icon"></i>
+      </div>
+
+      <div class="nav-links" id="nav-links">
+          <a href="index.html"><i class="fa-solid fa-house-chimney"></i> Home</a>
+          <a href="Book.html"><i class="fa-solid fa-book-open-reader"></i> Books</a>
+          <a href="Genres.html"><i class="fa-solid fa-tags"></i> Genres</a>
+          <a href="login.html"><i class="fa-solid fa-user-lock"></i> Login</a>
+      </div>
+    </nav>
+  </header>
+   <main class="main-container">
+    <div class="genre-menu">
+      <h2>Authors</h2>
+      <ul id="genreList">
+        <li class="active" data-genre="rowling">J.K. Rowling</li>
+        <li data-genre="orwell">George Orwell</li>
+        <li data-genre="austen">Jane Austen</li>
+        <li data-genre="twain">Mark Twain</li>
+        <li data-genre="christie">Agatha Christie</li>
+        <li data-genre="king">Stephen King</li>
+        <li data-genre="tolkien">J.R.R. Tolkien</li>
+        <li data-genre="dickens">Charles Dickens</li>
+        <li data-genre="hemingway">Ernest Hemingway</li>
+        <li data-genre="tolstoy">Leo Tolstoy</li>
+      </ul>
+    </div>
+
+    <div class="books-display">
+      <div id="rowling" class="genre-books active">
+        <h2>Books by J.K. Rowling</h2>
+        <div class="book-grid">
+          <a href="login.html" class="book-card"><img src="https://covers.openlibrary.org/b/olid/OL82563W-M.jpg" alt="Harry Potter and the Philosopher's Stone"><div class="book-info"><h3>Harry Potter and the Philosopher's Stone</h3><p>J.K. Rowling</p></div></a>
+          <a href="login.html" class="book-card"><img src="https://covers.openlibrary.org/b/olid/OL82564W-M.jpg" alt="Harry Potter and the Chamber of Secrets"><div class="book-info"><h3>Harry Potter and the Chamber of Secrets</h3><p>J.K. Rowling</p></div></a>
+          <a href="login.html" class="book-card"><img src="https://covers.openlibrary.org/b/olid/OL82565W-M.jpg" alt="Harry Potter and the Prisoner of Azkaban"><div class="book-info"><h3>Harry Potter and the Prisoner of Azkaban</h3><p>J.K. Rowling</p></div></a>
+          <a href="login.html" class="book-card"><img src="https://covers.openlibrary.org/b/olid/OL82566W-M.jpg" alt="Harry Potter and the Goblet of Fire"><div class="book-info"><h3>Harry Potter and the Goblet of Fire</h3><p>J.K. Rowling</p></div></a>
+          <a href="login.html" class="book-card"><img src="https://covers.openlibrary.org/b/olid/OL82567W-M.jpg" alt="Harry Potter and the Order of the Phoenix"><div class="book-info"><h3>Harry Potter and the Order of the Phoenix</h3><p>J.K. Rowling</p></div></a>
+          <a href="login.html" class="book-card"><img src="https://covers.openlibrary.org/b/olid/OL82568W-M.jpg" alt="Harry Potter and the Half-Blood Prince"><div class="book-info"><h3>Harry Potter and the Half-Blood Prince</h3><p>J.K. Rowling</p></div></a>
+          <a href="login.html" class="book-card"><img src="https://covers.openlibrary.org/b/olid/OL82569W-M.jpg" alt="Harry Potter and the Deathly Hallows"><div class="book-info"><h3>Harry Potter and the Deathly Hallows</h3><p>J.K. Rowling</p></div></a>
+          <a href="login.html" class="book-card"><img src="https://covers.openlibrary.org/b/olid/OL25864973W-M.jpg" alt="Fantastic Beasts and Where to Find Them"><div class="book-info"><h3>Fantastic Beasts and Where to Find Them</h3><p>J.K. Rowling</p></div></a>
+          <a href="login.html" class="book-card"><img src="https://covers.openlibrary.org/b/olid/OL25426938W-M.jpg" alt="The Cuckoo's Calling"><div class="book-info"><h3>The Cuckoo's Calling</h3><p>J.K. Rowling</p></div></a>
+          <a href="login.html" class="book-card"><img src="https://covers.openlibrary.org/b/olid/OL26418264W-M.jpg" alt="The Silkworm"><div class="book-info"><h3>The Silkworm</h3><p>J.K. Rowling</p></div></a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<script src="script.js">
+ 
+</script>
+</body>
+</html>
